@@ -135,7 +135,7 @@ Example:
 - **Web Page:**
   Displays a table of tested devices with columns for `ID`, `Serial Number`, and `Test Date`.
 
-  ![Flask App Web Page](attachment://Screenshot-from-2025-01-17-19-06-42.png)
+  ![Flask App Web Page](Screenshot.png)
 
 - **Console Output:**
   ```
