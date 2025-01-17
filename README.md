@@ -10,7 +10,7 @@ This project demonstrates a simple **Flask web application** integrated with a *
   - Connects to a MySQL database using the `Flask-MySQLdb` library.
   - Fetches all rows from the `tested_devices` table.
   - This database could be generated following the instructions of this other repository.
-    [Prolific_2303_Communication_Test_With_Mysql)](https://github.com/DaniAlRab/Prolific_2303_Communication_Test_With_Mysql)
+    [Prolific_2303_Communication_Test_With_Mysql](https://github.com/DaniAlRab/Prolific_2303_Communication_Test_With_Mysql)
 
 
 - **Dynamic Web Interface:**
