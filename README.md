@@ -9,15 +9,15 @@ This project demonstrates a simple **Flask web application** integrated with a *
 - **Database Integration:**
   - Connects to a MySQL database using the `Flask-MySQLdb` library.
   - Fetches all rows from the `tested_devices` table.
-  - This database could be generated following the instructions of this other repository.
-    [Prolific_2303_Communication_Test_With_Mysql](https://github.com/DaniAlRab/Prolific_2303_Communication_Test_With_Mysql)
-
 
 - **Dynamic Web Interface:**
   - Renders data dynamically on a web page using a Jinja2 template (`index.html`).
 
 - **Flask Routing:**
   - Implements a single route (`/`) to display the list of tested devices.
+
+- **Resource Linking:**
+  - Includes links to related files or repositories for additional context or tools.
 
 ---
 
@@ -35,6 +35,9 @@ This project demonstrates a simple **Flask web application** integrated with a *
 4. **Web Application:**
    - Runs the Flask application in debug mode, accessible via `http://127.0.0.1:5000/`.
 
+5. **File Linking:**
+   - Provides links to related files, such as scripts or resources from other repositories, for extended functionality.
+
 ---
 
 ## Configuration
@@ -48,7 +51,13 @@ app.config['MYSQL_DB'] = 'tested_devices'   # Database name
 ```
 
 ### **HTML Template:**
-Create an `index.html` file in the `templates` folder. Example:
+Create an `index.html` file in the following folder structure:
+```
+templates/
+└── pages/
+    └── index.html
+```
+Example:
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -73,6 +82,7 @@ Create an `index.html` file in the `templates` folder. Example:
         </tr>
         {% endfor %}
     </table>
+    <p>For additional resources, see the <a href="https://github.com/DaniAlRab/Prolific_2303_Communication_Test_With_Mysql">Prolific_2303_Communication_Test_With_Mysql</a>.</p>
 </body>
 </html>
 ```
@@ -93,6 +103,8 @@ Create an `index.html` file in the `templates` folder. Example:
         test_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
     ```
+  - This database could be generated following the instructions of this other repository:
+    [Prolific_2303_Communication_Test_With_Mysql](https://github.com/DaniAlRab/Prolific_2303_Communication_Test_With_Mysql)
 
 ---
 
@@ -108,7 +120,7 @@ Create an `index.html` file in the `templates` folder. Example:
    INSERT INTO tested_devices (serial_number) VALUES ('SN67890');
    ```
 
-3. Create the `index.html` file in a `templates` folder within the project directory.
+3. Create the `index.html` file in the `templates/pages` folder within the project directory.
 
 4. Run the Flask application:
    ```bash
@@ -123,15 +135,24 @@ Create an `index.html` file in the `templates` folder. Example:
 - **Web Page:**
   Displays a table of tested devices with columns for `ID`, `Serial Number`, and `Test Date`.
 
+  ![Flask App Web Page](attachment://Screenshot-from-2025-01-17-19-06-42.png)
+
 - **Console Output:**
-  Logs the Flask application’s activity and debugging information.
+  ```
+  * Serving Flask app 'Flask_Mysql_Html'
+  * Debug mode: on
+  WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+  * Running on http://127.0.0.1:5000
+  Press CTRL+C to quit
+  * Restarting with stat
+  * Debugger is active!
+  * Debugger PIN: 486-562-837
+  127.0.0.1 - - [17/Jan/2025 19:04:50] "GET / HTTP/1.1" 200 -
+  127.0.0.1 - - [17/Jan/2025 19:04:53] "GET / HTTP/1.1" 200 -
+  ```
 
 ---
 
 ## Notes
 - Ensure the MySQL database service is running and accessible.
-- Place the `index.html` file in a folder named `templates` in the project directory, as Flask expects templates to be in this folder.
-- Debug mode is enabled for development purposes but should be disabled in production.
-
----
-
+- Place the `index.html` file in the specified folder structure: `templates/pages/`.
