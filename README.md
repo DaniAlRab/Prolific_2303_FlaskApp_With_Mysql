@@ -9,6 +9,9 @@ This project demonstrates a simple **Flask web application** integrated with a *
 - **Database Integration:**
   - Connects to a MySQL database using the `Flask-MySQLdb` library.
   - Fetches all rows from the `tested_devices` table.
+  - This database could be generated following the instructions of this repository.
+    [View Example File](https://github.com/example-user/sample-repo/blob/main/example.py)
+
 
 - **Dynamic Web Interface:**
   - Renders data dynamically on a web page using a Jinja2 template (`index.html`).
